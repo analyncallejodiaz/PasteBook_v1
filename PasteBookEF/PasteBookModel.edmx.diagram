@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2d562c7fd89044f3aa5171b156cad9c3" Name="Diagram1">
+        <EntityTypeShape EntityType="PasteBookModel.COMMENT" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="PasteBookModel.FRIEND" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PasteBookModel.LIKE" Width="1.5" PointX="10.5" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PasteBookModel.NOTIFICATION" Width="1.5" PointX="7.5" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PasteBookModel.POST" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PasteBookModel.REF_COUNTRY" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PasteBookModel.USER" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="PasteBookModel.FK__COMMENTS__POST_I__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="PasteBookModel.FK__COMMENTS__POSTER__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="PasteBookModel.FK__NOTIFICAT__COMME__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="PasteBookModel.FK__LIKES__LIKED_BY__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="PasteBookModel.FK__LIKES__POST_ID__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="PasteBookModel.FK__NOTIFICAT__POST___30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="PasteBookModel.FK__NOTIFICAT__RECEI__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="PasteBookModel.FK__NOTIFICAT__SENDE__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="PasteBookModel.FK__POSTS__POSTER_ID__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="PasteBookModel.FK__POSTS__PROFILE_O__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="PasteBookModel.FK__USER__COUNTRY_ID__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="PasteBookModel.FK__FRIENDS__FRIEND___3E52440B" />
+        <AssociationConnector Association="PasteBookModel.FK__FRIENDS__USER_ID__3D5E1FD2" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
