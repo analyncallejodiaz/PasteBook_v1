@@ -182,6 +182,16 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PasteBookBusinessLogic\PasteBookBusinessLogic.csproj">
+      <Project>{ebbab061-a112-414f-9260-7545cc1d1d2b}</Project>
+      <Name>PasteBookBusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PasteBookEF\PasteBookEF.csproj">
+      <Project>{1ddaf89e-816f-482a-9288-f7eda866db78}</Project>
+      <Name>PasteBookEF</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
