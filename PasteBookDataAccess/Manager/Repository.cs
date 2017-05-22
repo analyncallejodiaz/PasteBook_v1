@@ -87,6 +87,7 @@ namespace PasteBookDataAccess.Manager
                 {
                     IQueryable<T> query = context.Set<T>();
                     listOfRecords = query.Where(condition).ToList();
+                    return listOfRecords;
                 }
             }catch(Exception ex)
             {
