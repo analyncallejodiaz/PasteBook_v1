@@ -50,6 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Manager\ConversionManager.cs" />
+    <Compile Include="Manager\HashGenerator.cs" />
+    <Compile Include="Manager\PasswordManager.cs" />
+    <Compile Include="Manager\SaltGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,10 +61,6 @@
       <Project>{178b6f70-5a66-48ad-b9aa-a450af24f298}</Project>
       <Name>PasteBookDataAccess</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

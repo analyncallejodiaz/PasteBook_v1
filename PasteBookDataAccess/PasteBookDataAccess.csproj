@@ -50,6 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Manager\AccountRepository.cs" />
+    <Compile Include="Manager\IRepository.cs" />
+    <Compile Include="Manager\LikeRepository.cs" />
+    <Compile Include="Manager\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
