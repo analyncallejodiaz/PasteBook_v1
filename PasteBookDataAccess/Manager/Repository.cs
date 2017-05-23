@@ -80,7 +80,7 @@ namespace PasteBookDataAccess.Manager
 
         public virtual List<T> RetrieveListOfRecord<T>(Func<T, bool> condition) where T : class
         {
-            List<T> listOfRecords = new List<T>;
+            List<T> listOfRecords = new List<T>();
             try
             {
                 using (var context = new PasteBookEntities())
@@ -116,7 +116,7 @@ namespace PasteBookDataAccess.Manager
             throw new NotImplementedException();
         }
 
-        public
+       
 
     }
 }

@@ -14,6 +14,6 @@ namespace PasteBookDataAccess.Manager
         T RetrieveRecord<T>(Func<T, bool> condition) where T : class;
         List<T> RetrieveListOfRecord<T>(Func<T, bool> condition) where T : class;
         bool CheckIfRecordExist<T>(Func<T, bool> condition) where T : class;
-  
+       
     }
 }
