@@ -1,0 +1,29 @@
+﻿npm ERR! Windows_NT 6.1.7601
+npm ERR! argv "C:\\Users\\paulo.mollos\\Source\\Repos\\PasteBook_v1\\packages\\Node.js.5.3.0\\node.exe" "C:\\Users\\paulo.mollos\\Source\\Repos\\PasteBook_v1\\packages\\Npm.3.5.2\\node_modules\\npm\\bin\\npm-cli.js" "install" "jsreport" "--production" "--save" "--save-exact"
+npm ERR! node v5.3.0
+npm ERR! npm  v3.5.2
+npm ERR! code ETIMEDOUT
+npm ERR! errno ETIMEDOUT
+npm ERR! syscall connect
+
+npm ERR! network connect ETIMEDOUT 151.101.76.162:443
+npm ERR! network This is most likely not a problem with npm itself
+npm ERR! network and is related to network connectivity.
+npm ERR! network In most cases you are behind a proxy or have bad network settings.
+npm ERR! network 
+npm ERR! network If you are behind a proxy, please make sure that the
+npm ERR! network 'proxy' config is set properly.  See: 'npm help config'
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     C:\Users\paulo.mollos\Source\Repos\PasteBook_v1\PasteBook_v1\jsreport\app\npm-debug.log
+Error: Command failed: "C:\Users\paulo.mollos\Source\Repos\PasteBook_v1\PasteBook_v1\.bin\npm.cmd" install jsreport --production --save --save-exact
+    at checkExecSyncError (child_process.js:464:13)
+    at execSync (child_process.js:504:13)
+    at Object.<anonymous> (C:\Users\paulo.mollos\Source\Repos\PasteBook_v1\packages\jsreport.Embedded.1.0.3\tools\install.js:48:5)
+    at Module._compile (module.js:398:26)
+    at Object.Module._extensions..js (module.js:405:10)
+    at Module.load (module.js:344:32)
+    at Function.Module._load (module.js:301:12)
+    at Function.Module.runMain (module.js:430:10)
+    at startup (node.js:141:18)
+    at node.js:980:3
