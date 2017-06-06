@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PasteBookDataAccess.Manager
+namespace PasteBookDataAccess
 {
-    interface IRepository :IDisposable
+    public interface IRepository :IDisposable
     {
         bool AddEntry<T>(T record) where T : class;
         bool EditEntry<T>(T record) where T : class;

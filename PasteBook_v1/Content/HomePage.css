@@ -1,0 +1,23 @@
+﻿body {
+  
+}
+.home-page-col{
+   margin-top: 10px;
+    border-style:solid;
+    border-color:black;
+    height:650px;
+ 
+}
+#textarea_homepage{
+    width:600px;
+}
+#add_post_textarea{
+        padding-left: 100px;
+    padding-top: 10px;
+}
+#add_post_btn{
+    }
+#button_post{
+ margin-right: 60px;
+ margin-top:5px;    
+}

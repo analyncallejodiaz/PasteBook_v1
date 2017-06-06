@@ -1,13 +1,15 @@
-﻿using System;
+﻿using PasteBookEF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PasteBookDataAccess.Manager
+namespace PasteBookDataAccess
 {
-    class AccountRepository:Repository
+   public class AccountRepository:Repository
     {
 
+ 
     }
 }

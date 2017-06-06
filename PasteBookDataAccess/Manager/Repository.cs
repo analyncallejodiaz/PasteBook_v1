@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using PasteBookEF;
 using System.Data.Entity;
 
-namespace PasteBookDataAccess.Manager
+namespace PasteBookDataAccess
 {
-    class Repository :IRepository
+    public class Repository :IRepository 
 
     {
         public virtual bool AddEntry<T>(T record) where T : class
