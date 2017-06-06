@@ -49,11 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogics\AccountMethods.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Manager\ConversionManager.cs" />
     <Compile Include="Manager\HashGenerator.cs" />
     <Compile Include="Manager\PasswordManager.cs" />
     <Compile Include="Manager\SaltGenerator.cs" />
+    <Compile Include="PasteBookBL\AccountBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
