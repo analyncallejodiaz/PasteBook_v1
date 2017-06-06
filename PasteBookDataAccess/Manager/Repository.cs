@@ -8,7 +8,7 @@ using System.Data.Entity;
 
 namespace PasteBookDataAccess.Manager
 {
-    class Repository :IRepository
+    public class Repository :IRepository
 
     {
         public virtual bool AddEntry<T>(T record) where T : class

@@ -5,7 +5,7 @@
 
 function RegisterUser()
 {
-
+    $('.datepicker').datetimepicker();
 }
 
 function GetAccount() {

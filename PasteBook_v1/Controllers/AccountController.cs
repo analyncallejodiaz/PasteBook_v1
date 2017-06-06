@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PasteBook_v1.Models;
+using PasteBookEF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +10,23 @@ namespace PasteBook_v1.Controllers
 {
     public class AccountController : Controller
     {
+        AccountManager manager = new AccountManager();
         // GET: Account
         public ActionResult Index()
         {
             return View();
         }
+
+        public PartialViewResult Login()
+        {
+            return PartialView("Login");
+        }
+
+        //public ActionResult Login(string returnUrl, string token = "")
+        //{
+        //    ViewBag.ReturnUrl = returnUrl;
+        //    return RedirectToAction("Index", "Home");
+        //}
 
         public ActionResult Register()
         {
@@ -51,6 +65,26 @@ namespace PasteBook_v1.Controllers
             }
             ViewBag.Day = days;
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Register(USER newUserModel) {
+
+            
+
+            manager.AddUser(newUserModel);
+
+
+            return RedirectToAction("Index","Home"); 
+        }
+
+        public JsonResult LoginAccount(LoginModel accountJson) {
+       
+              bool accountExists = manager.LoginUser(accountJson.UserName, accountJson.Password);
+              if(accountExists)
+                return Json(new { accountExists = true,M = "Successful login." });
+              else
+                return Json(new { accountExists = false, M = "Username/Password incorrect." });
         }
 
     }
