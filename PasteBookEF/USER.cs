@@ -12,7 +12,7 @@ namespace PasteBookEF
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-
+    
     public partial class USER
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -28,21 +28,30 @@ namespace PasteBookEF
             this.FRIENDS = new HashSet<FRIEND>();
             this.FRIENDS1 = new HashSet<FRIEND>();
         }
-       
+    
         public int ID { get; set; }
-        [Required]
         public string USER_NAME { get; set; }
+        [Required]
+        [DataType(DataType.Password)]
+        [Display(Name = "Password")]
         public string PASSWORD { get; set; }
         public string SALT { get; set; }
+        [Display(Name = "First Name")]
         public string FIRST_NAME { get; set; }
+        [Display(Name = "Last Name")]
         public string LAST_NAME { get; set; }
+        [Display(Name = "Birthday")]
+        [DataType(DataType.DateTime)]
         public System.DateTime BIRTHDATE { get; set; }
         public Nullable<int> COUNTRY_ID { get; set; }
+        [Display(Name = "Mobile No.")]
         public string MOBILE_NO { get; set; }
+        [Display(Name = "Gender")]
         public string GENDER { get; set; }
         public byte[] PROFILE_PIC { get; set; }
-        public System.DateTime DATE_CREATED { get; set; }
+        public Nullable<System.DateTime> DATE_CREATED { get; set; }
         public string ABOUT_ME { get; set; }
+        [Display(Name = "Email Address")]
         public string EMAIL_ADDRESS { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

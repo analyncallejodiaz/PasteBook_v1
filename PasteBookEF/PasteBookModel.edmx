@@ -79,11 +79,11 @@
           <Property Name="MOBILE_NO" Type="varchar" MaxLength="50" />
           <Property Name="GENDER" Type="char" MaxLength="1" />
           <Property Name="PROFILE_PIC" Type="varbinary" MaxLength="1" />
-          <Property Name="DATE_CREATED" Type="datetime" Nullable="false" />
+          <Property Name="DATE_CREATED" Type="datetime" />
           <Property Name="ABOUT_ME" Type="varchar" MaxLength="2000" />
           <Property Name="EMAIL_ADDRESS" Type="varchar" MaxLength="50" />
         </EntityType>
-        <Association Name="FK__COMMENTS__POST_I__239E4DCF">
+        <Association Name="FK__COMMENTS__POST_I__15502E78">
           <End Role="USER" Type="Self.USER" Multiplicity="1" />
           <End Role="COMMENTS" Type="Self.COMMENTS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -95,7 +95,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__COMMENTS__POSTER__24927208">
+        <Association Name="FK__COMMENTS__POSTER__164452B1">
           <End Role="USER" Type="Self.USER" Multiplicity="1" />
           <End Role="COMMENTS" Type="Self.COMMENTS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -107,31 +107,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__FRIENDS__FRIEND___3E52440B">
-          <End Role="USER" Type="Self.USER" Multiplicity="1" />
-          <End Role="FRIENDS" Type="Self.FRIENDS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="USER">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="FRIENDS">
-              <PropertyRef Name="FRIEND_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__FRIENDS__USER_ID__3D5E1FD2">
-          <End Role="USER" Type="Self.USER" Multiplicity="1" />
-          <End Role="FRIENDS" Type="Self.FRIENDS" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="USER">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="FRIENDS">
-              <PropertyRef Name="USER_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__LIKES__LIKED_BY__36B12243">
+        <Association Name="FK__LIKES__LIKED_BY__286302EC">
           <End Role="USER" Type="Self.USER" Multiplicity="1" />
           <End Role="LIKES" Type="Self.LIKES" Multiplicity="*" />
           <ReferentialConstraint>
@@ -143,7 +119,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__LIKES__POST_ID__35BCFE0A">
+        <Association Name="FK__LIKES__POST_ID__276EDEB3">
           <End Role="POSTS" Type="Self.POSTS" Multiplicity="1" />
           <End Role="LIKES" Type="Self.LIKES" Multiplicity="*" />
           <ReferentialConstraint>
@@ -155,7 +131,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__NOTIFICAT__COMME__300424B4">
+        <Association Name="FK__NOTIFICAT__COMME__21B6055D">
           <End Role="COMMENTS" Type="Self.COMMENTS" Multiplicity="0..1" />
           <End Role="NOTIFICATION" Type="Self.NOTIFICATION" Multiplicity="*" />
           <ReferentialConstraint>
@@ -167,7 +143,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__NOTIFICAT__POST___30F848ED">
+        <Association Name="FK__NOTIFICAT__POST___22AA2996">
           <End Role="POSTS" Type="Self.POSTS" Multiplicity="0..1" />
           <End Role="NOTIFICATION" Type="Self.NOTIFICATION" Multiplicity="*" />
           <ReferentialConstraint>
@@ -179,7 +155,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__NOTIFICAT__RECEI__2E1BDC42">
+        <Association Name="FK__NOTIFICAT__RECEI__1FCDBCEB">
           <End Role="USER" Type="Self.USER" Multiplicity="1" />
           <End Role="NOTIFICATION" Type="Self.NOTIFICATION" Multiplicity="*" />
           <ReferentialConstraint>
@@ -191,7 +167,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__NOTIFICAT__SENDE__2F10007B">
+        <Association Name="FK__NOTIFICAT__SENDE__20C1E124">
           <End Role="USER" Type="Self.USER" Multiplicity="1" />
           <End Role="NOTIFICATION" Type="Self.NOTIFICATION" Multiplicity="*" />
           <ReferentialConstraint>
@@ -203,7 +179,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__POSTS__POSTER_ID__1ED998B2">
+        <Association Name="FK__POSTS__POSTER_ID__108B795B">
           <End Role="USER" Type="Self.USER" Multiplicity="1" />
           <End Role="POSTS" Type="Self.POSTS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -215,7 +191,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__POSTS__PROFILE_O__1DE57479">
+        <Association Name="FK__POSTS__PROFILE_O__0F975522">
           <End Role="USER" Type="Self.USER" Multiplicity="1" />
           <End Role="POSTS" Type="Self.POSTS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -227,7 +203,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__USER__COUNTRY_ID__1920BF5C">
+        <Association Name="FK__USER__COUNTRY_ID__0AD2A005">
           <End Role="REF_COUNTRY" Type="Self.REF_COUNTRY" Multiplicity="0..1" />
           <End Role="USER" Type="Self.USER" Multiplicity="*" />
           <ReferentialConstraint>
@@ -247,55 +223,47 @@
           <EntitySet Name="POSTS" EntityType="Self.POSTS" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="REF_COUNTRY" EntityType="Self.REF_COUNTRY" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="USER" EntityType="Self.USER" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__COMMENTS__POST_I__239E4DCF" Association="Self.FK__COMMENTS__POST_I__239E4DCF">
+          <AssociationSet Name="FK__COMMENTS__POST_I__15502E78" Association="Self.FK__COMMENTS__POST_I__15502E78">
             <End Role="USER" EntitySet="USER" />
             <End Role="COMMENTS" EntitySet="COMMENTS" />
           </AssociationSet>
-          <AssociationSet Name="FK__COMMENTS__POSTER__24927208" Association="Self.FK__COMMENTS__POSTER__24927208">
+          <AssociationSet Name="FK__COMMENTS__POSTER__164452B1" Association="Self.FK__COMMENTS__POSTER__164452B1">
             <End Role="USER" EntitySet="USER" />
             <End Role="COMMENTS" EntitySet="COMMENTS" />
           </AssociationSet>
-          <AssociationSet Name="FK__FRIENDS__FRIEND___3E52440B" Association="Self.FK__FRIENDS__FRIEND___3E52440B">
-            <End Role="USER" EntitySet="USER" />
-            <End Role="FRIENDS" EntitySet="FRIENDS" />
-          </AssociationSet>
-          <AssociationSet Name="FK__FRIENDS__USER_ID__3D5E1FD2" Association="Self.FK__FRIENDS__USER_ID__3D5E1FD2">
-            <End Role="USER" EntitySet="USER" />
-            <End Role="FRIENDS" EntitySet="FRIENDS" />
-          </AssociationSet>
-          <AssociationSet Name="FK__LIKES__LIKED_BY__36B12243" Association="Self.FK__LIKES__LIKED_BY__36B12243">
+          <AssociationSet Name="FK__LIKES__LIKED_BY__286302EC" Association="Self.FK__LIKES__LIKED_BY__286302EC">
             <End Role="USER" EntitySet="USER" />
             <End Role="LIKES" EntitySet="LIKES" />
           </AssociationSet>
-          <AssociationSet Name="FK__LIKES__POST_ID__35BCFE0A" Association="Self.FK__LIKES__POST_ID__35BCFE0A">
+          <AssociationSet Name="FK__LIKES__POST_ID__276EDEB3" Association="Self.FK__LIKES__POST_ID__276EDEB3">
             <End Role="POSTS" EntitySet="POSTS" />
             <End Role="LIKES" EntitySet="LIKES" />
           </AssociationSet>
-          <AssociationSet Name="FK__NOTIFICAT__COMME__300424B4" Association="Self.FK__NOTIFICAT__COMME__300424B4">
+          <AssociationSet Name="FK__NOTIFICAT__COMME__21B6055D" Association="Self.FK__NOTIFICAT__COMME__21B6055D">
             <End Role="COMMENTS" EntitySet="COMMENTS" />
             <End Role="NOTIFICATION" EntitySet="NOTIFICATION" />
           </AssociationSet>
-          <AssociationSet Name="FK__NOTIFICAT__POST___30F848ED" Association="Self.FK__NOTIFICAT__POST___30F848ED">
+          <AssociationSet Name="FK__NOTIFICAT__POST___22AA2996" Association="Self.FK__NOTIFICAT__POST___22AA2996">
             <End Role="POSTS" EntitySet="POSTS" />
             <End Role="NOTIFICATION" EntitySet="NOTIFICATION" />
           </AssociationSet>
-          <AssociationSet Name="FK__NOTIFICAT__RECEI__2E1BDC42" Association="Self.FK__NOTIFICAT__RECEI__2E1BDC42">
+          <AssociationSet Name="FK__NOTIFICAT__RECEI__1FCDBCEB" Association="Self.FK__NOTIFICAT__RECEI__1FCDBCEB">
             <End Role="USER" EntitySet="USER" />
             <End Role="NOTIFICATION" EntitySet="NOTIFICATION" />
           </AssociationSet>
-          <AssociationSet Name="FK__NOTIFICAT__SENDE__2F10007B" Association="Self.FK__NOTIFICAT__SENDE__2F10007B">
+          <AssociationSet Name="FK__NOTIFICAT__SENDE__20C1E124" Association="Self.FK__NOTIFICAT__SENDE__20C1E124">
             <End Role="USER" EntitySet="USER" />
             <End Role="NOTIFICATION" EntitySet="NOTIFICATION" />
           </AssociationSet>
-          <AssociationSet Name="FK__POSTS__POSTER_ID__1ED998B2" Association="Self.FK__POSTS__POSTER_ID__1ED998B2">
+          <AssociationSet Name="FK__POSTS__POSTER_ID__108B795B" Association="Self.FK__POSTS__POSTER_ID__108B795B">
             <End Role="USER" EntitySet="USER" />
             <End Role="POSTS" EntitySet="POSTS" />
           </AssociationSet>
-          <AssociationSet Name="FK__POSTS__PROFILE_O__1DE57479" Association="Self.FK__POSTS__PROFILE_O__1DE57479">
+          <AssociationSet Name="FK__POSTS__PROFILE_O__0F975522" Association="Self.FK__POSTS__PROFILE_O__0F975522">
             <End Role="USER" EntitySet="USER" />
             <End Role="POSTS" EntitySet="POSTS" />
           </AssociationSet>
-          <AssociationSet Name="FK__USER__COUNTRY_ID__1920BF5C" Association="Self.FK__USER__COUNTRY_ID__1920BF5C">
+          <AssociationSet Name="FK__USER__COUNTRY_ID__0AD2A005" Association="Self.FK__USER__COUNTRY_ID__0AD2A005">
             <End Role="REF_COUNTRY" EntitySet="REF_COUNTRY" />
             <End Role="USER" EntitySet="USER" />
           </AssociationSet>
@@ -394,7 +362,7 @@
           <Property Name="MOBILE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="GENDER" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="PROFILE_PIC" Type="Binary" MaxLength="1" FixedLength="false" />
-          <Property Name="DATE_CREATED" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DATE_CREATED" Type="DateTime" Nullable="true" Precision="3" />
           <Property Name="ABOUT_ME" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
           <Property Name="EMAIL_ADDRESS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="COMMENTS" Relationship="Self.FK__COMMENTS__POST_I__239E4DCF" FromRole="USER" ToRole="COMMENTS" />

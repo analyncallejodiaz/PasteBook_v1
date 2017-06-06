@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PasteBookDataAccess
 {
-   public class AccountRepository:Repository
+    public class AccountRepository:Repository
     {
 
  
