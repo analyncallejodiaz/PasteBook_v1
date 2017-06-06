@@ -13,13 +13,20 @@ namespace PasteBook_v1.Controllers
             return View();
         }
 
+
+        public ActionResult HomePage()
+        {
+            return View();
+
+        }
         //public ActionResult About()
         //{
         //    ViewBag.Message = "Your application description page.";
 
         //    return View();
         //}
-    
+    }
+
 
         //public ActionResult Contact()
         //{

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PasteBookDataAccess.Manager
+namespace PasteBookDataAccess
 {
-    class LikeRepository
+    public class LikeRepository
     {
     }
 }

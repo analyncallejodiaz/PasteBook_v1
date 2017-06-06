@@ -12,7 +12,7 @@ namespace PasteBookEF
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-
+    
     public partial class USER
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -30,8 +30,6 @@ namespace PasteBookEF
         }
     
         public int ID { get; set; }
-        [Required]
-        [Display(Name = "Username")]
         public string USER_NAME { get; set; }
         [Required]
         [DataType(DataType.Password)]
