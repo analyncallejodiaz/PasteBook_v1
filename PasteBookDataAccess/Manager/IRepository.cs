@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PasteBookDataAccess
 {
-    public interface IRepository :IDisposable
+    interface IRepository :IDisposable
     {
         bool AddEntry<T>(T record) where T : class;
         bool EditEntry<T>(T record) where T : class;

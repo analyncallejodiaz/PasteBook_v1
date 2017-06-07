@@ -62,12 +62,7 @@
       <Project>{178b6f70-5a66-48ad-b9aa-a450af24f298}</Project>
       <Name>PasteBookDataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PasteBookEF\PasteBookEF.csproj">
-      <Project>{1ddaf89e-816f-482a-9288-f7eda866db78}</Project>
-      <Name>PasteBookEF</Name>
-    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

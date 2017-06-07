@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasteBook_v1", "PasteBook_v1\PasteBook_v1.csproj", "{76CEF2CD-FF06-423E-9038-261424479A54}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasteBookBusinessLogic", "PasteBookBusinessLogic\PasteBookBusinessLogic.csproj", "{EBBAB061-A112-414F-9260-7545CC1D1D2B}"
-	ProjectSection(ProjectDependencies) = postProject
-		{1DDAF89E-816F-482A-9288-F7EDA866DB78} = {1DDAF89E-816F-482A-9288-F7EDA866DB78}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasteBookDataAccess", "PasteBookDataAccess\PasteBookDataAccess.csproj", "{178B6F70-5A66-48AD-B9AA-A450AF24F298}"
 EndProject

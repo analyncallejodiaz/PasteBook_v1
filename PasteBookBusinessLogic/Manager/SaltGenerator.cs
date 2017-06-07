@@ -18,7 +18,6 @@ namespace PasteBookBusinessLogic.Manager
         }
         public static string GetSaltString()
         {
-            crypto = new RNGCryptoServiceProvider();
             byte[] saltBytes = new byte[SaltSize];
             crypto.GetNonZeroBytes(saltBytes);
             return ConversionManager.ConvertByteToString(saltBytes);
