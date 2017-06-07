@@ -1,4 +1,4 @@
-﻿//using PasteBook_v1.Models;
+﻿using PasteBook_v1.Models;
 using PasteBookEF;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ namespace PasteBook_v1.Controllers
 {
     public class AccountController : Controller
     {
-       //AccountManager manager = new AccountManager();
+       AccountManager manager = new AccountManager();
         // GET: Account
         public ActionResult Index()
         {
@@ -78,15 +78,15 @@ namespace PasteBook_v1.Controllers
         //    return RedirectToAction("Index","Home"); 
         //}
 
-        //public JsonResult LoginAccount(LoginModel accountJson)
-        //{
+        public JsonResult LoginAccount(LoginModel accountJson)
+        {
 
-        //    bool accountExists = manager.LoginUser(accountJson.UserName, accountJson.Password);
-        //    if (accountExists)
-        //        return Json(new { accountExists = true, M = "Successful login." });
-        //    else
-        //        return Json(new { accountExists = false, M = "Username/Password incorrect." });
-        //}
+            bool accountExists = manager.LoginUser(accountJson.UserName, accountJson.Password);
+            if (accountExists)
+                return Json(new { accountExists = true, M = "Successful login." });
+            else
+                return Json(new { accountExists = false, M = "Username/Password incorrect." });
+        }
 
     }
 }
