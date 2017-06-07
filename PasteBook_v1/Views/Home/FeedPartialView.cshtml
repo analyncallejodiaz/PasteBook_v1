@@ -1,0 +1,49 @@
+﻿@model PasteBookEF.POST
+<div class="row" id="add_post_textarea">
+    <textarea class="form-control" rows="5" id="textarea_homepage" placeholder="What is on your mind?"></textarea>
+</div>
+<div class="row" id="add_post_btn">
+    <button type="button" class="btn btn-default pull-right" id="bu tton_post">Post</button>
+</div>
+<div>
+    <h4>POST</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CREATED_DATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CREATED_DATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONTENT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONTENT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PROFILE_OWNER_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROFILE_OWNER_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.POSTER_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.POSTER_ID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
