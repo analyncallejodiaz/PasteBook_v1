@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace PasteBookDataAccess
 {
-    interface IRepository :IDisposable
+    public interface IRepository <T> where T : class
     {
-        bool AddEntry<T>(T record) where T : class;
-        bool EditEntry<T>(T record) where T : class;
-        bool DeleteEntry<T>(T record) where T : class;
-        T RetrieveRecord<T>(Func<T, bool> condition) where T : class;
-        List<T> RetrieveListOfRecord<T>(Func<T, bool> condition) where T : class;
-        bool CheckIfRecordExist<T>(Func<T, bool> condition) where T : class;
+        bool AddEntry(T record);
+        bool EditEntry(T record);
+        bool DeleteEntry(T record);
+        T RetrieveRecord(Func<T, bool> condition);
+        List<T> RetrieveListOfRecord(Func<T, bool> condition);
+        bool CheckIfRecordExist(Func<T, bool> condition);
        
     }
 }

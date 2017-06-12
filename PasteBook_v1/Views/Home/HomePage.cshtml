@@ -13,22 +13,33 @@
         </div>
         <div class="col-md-8 home-page-col" id="home_second_col">
             <div class="row" id="add_post_textarea">
+                <span id="character_counter"></span>
                 <textarea class="form-control" rows="5" id="textarea_homepage" placeholder="What is on your mind?"></textarea>
+                <span id="add_post_error"></span>
             </div>
             <div class="row" id="add_post_btn">
-                <button type="button" class="btn btn-default pull-right" id="bu tton_post">Post</button>
+                <button type="button" class="btn btn-default pull-right" id="button_post">Post</button>
             </div>
-            <div class="row">
-                <div class="col-md-12" id="post_content_container">
+            <div class="row " id="post_container">
+                <div class="col-md-12 reset-padding container reset-margin" id="post_content_container">
                     <div class="col-md-4" id="post_image">
 
                     </div>
                     <div class="col-md-8" id="post_content">
-
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
                     </div>
                 </div>
-                <div class="row" id="post_btn_container">
-
+                <div class="col-md-12" id="post_btn_container">
+                    <button type="button" class="btn btn-default">Like</button>
+                    <button type="button" class="btn btn-default">Comments</button>
+                </div>
+                <div class="col-md-12 container reset-padding" id="comment_container">
+                    <div class="col-md-10 reset-padding">
+                        <textarea class="form-control" rows="2" id="textarea_comment"></textarea>
+                    </div>
+                    <div class="col-md-2 reset-padding" id="comment_btn_container">
+                        <button type="button" class="btn btn-default reset-padding" id="comment_btn">Comment</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -37,3 +48,11 @@
         </div>
     </div>
 </div>
+<script>
+    var AddPostUrl = '@Url.Action("AddPost","Home")';
+</script>
+
+@section scripts {
+    <script src="~/Scripts/HomePageScripts/HomePage.js"></script>
+    
+    }

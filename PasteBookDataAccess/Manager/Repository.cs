@@ -8,10 +8,10 @@ using System.Data.Entity;
 
 namespace PasteBookDataAccess
 {
-    public class Repository :IRepository 
+    public class Repository <T> : IRepository <T> where T : class
 
     {
-        public virtual bool AddEntry<T>(T record) where T : class
+        public virtual bool AddEntry(T record)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace PasteBookDataAccess
             }
         }
 
-        public virtual bool EditEntry<T>(T record) where T : class
+        public virtual bool EditEntry(T record)
         {
 
             try
@@ -45,7 +45,7 @@ namespace PasteBookDataAccess
             }
         }
 
-        public virtual bool DeleteEntry<T>(T record) where T : class
+        public virtual bool DeleteEntry(T record)
         {
             try
             {
@@ -61,7 +61,7 @@ namespace PasteBookDataAccess
             }
         }
 
-        public virtual T RetrieveRecord<T>(Func<T, bool> condition) where T : class
+        public virtual T RetrieveRecord(Func<T, bool> condition)
         {
             try
             {
@@ -78,7 +78,7 @@ namespace PasteBookDataAccess
             }
         }
 
-        public virtual List<T> RetrieveListOfRecord<T>(Func<T, bool> condition) where T : class
+        public virtual List<T> RetrieveListOfRecord(Func<T, bool> condition) 
         {
             List<T> listOfRecords = new List<T>();
             try
@@ -95,7 +95,7 @@ namespace PasteBookDataAccess
             }
         }
 
-        public virtual bool CheckIfRecordExist<T>(Func<T, bool> condition) where T : class
+        public virtual bool CheckIfRecordExist(Func<T, bool> condition)
         {
             try
             {
@@ -111,12 +111,7 @@ namespace PasteBookDataAccess
             }
         }
 
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-
-       
+     
 
     }
 }

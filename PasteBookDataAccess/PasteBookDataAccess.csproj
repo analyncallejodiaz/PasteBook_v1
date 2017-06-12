@@ -53,6 +53,7 @@
     <Compile Include="Manager\AccountRepository.cs" />
     <Compile Include="Manager\IRepository.cs" />
     <Compile Include="Manager\LikeRepository.cs" />
+    <Compile Include="Manager\PostRepository.cs" />
     <Compile Include="Manager\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

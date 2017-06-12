@@ -1,27 +1,95 @@
 ﻿body {
   
 }
+.reset-padding{
+    padding:0px;
+}
+.reset-margin{
+    margin:0px;
+}
 .home-page-col{
    margin-top: 10px;
     border-style:solid;
     border-color:black;
-    height:650px;
+    min-height:650px;
  
 }
 #textarea_homepage{
     width:600px;
+    resize:none;
+}
+.add-textarea-error{
+    outline:1px solid red; 
+}
+#character_counter{
+    float:right;
 }
 #add_post_textarea{
-        padding-left: 100px;
+    padding-left: 100px;
     padding-top: 10px;
 }
 #add_post_btn{
     }
-#button_post{
+#button_post,#character_counter{
  margin-right: 60px;
  margin-top:5px;    
 }
-#post_content_container,post_image,post_btn_container{
+#post_content_container,#post_image,#post_btn_container,#post_content,#comment_container{
     border-style:solid;
     border-color:black;
+}
+
+#post_content_container{
+    min-height:100px;
+    width:500px;
+    padding: 10px;
+}
+#post_image{
+   
+    height:50px;
+    width:50px;
+}
+#post_btn_container{
+    box-sizing:border-box;
+     padding:3px 1px;
+    width:500px;
+ 
+}
+#post_container{
+    box-sizing: border-box;
+    box-sizing:border-box;
+    padding-top: 20px;
+    padding: 20px 100px;
+}
+#post_content{
+    min-height: 80px;
+    width:400px;
+    margin-left:5px;
+}
+#comment_container{
+    box-sizing:border-box;
+    width:500px;
+    padding:5px;
+    margin:0px;
+
+}
+#comment_btn_container{
+    padding-top:10px;
+}
+#textarea_comment{
+    /*width:380px;*/
+    resize:none;
+}
+#comment_btn{
+   padding: 6px 8px;
+   margin-left:3px;
+}
+@media screen and (max-width: 480px) {
+    #textarea_homepage{
+    width:300px;
+}
+    #add_post_textarea{
+    padding-left: 25px;
+    padding-top: 10px;
+}
 }

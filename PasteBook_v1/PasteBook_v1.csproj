@@ -181,6 +181,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\HomePageScripts\HomePage.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -209,6 +210,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Home\HomePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -226,6 +228,10 @@
     <ProjectReference Include="..\PasteBookBusinessLogic\PasteBookBusinessLogic.csproj">
       <Project>{ebbab061-a112-414f-9260-7545cc1d1d2b}</Project>
       <Name>PasteBookBusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PasteBookDataAccess\PasteBookDataAccess.csproj">
+      <Project>{178b6f70-5a66-48ad-b9aa-a450af24f298}</Project>
+      <Name>PasteBookDataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\PasteBookEF\PasteBookEF.csproj">
       <Project>{1ddaf89e-816f-482a-9288-f7eda866db78}</Project>

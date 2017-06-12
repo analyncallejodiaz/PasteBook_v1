@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PasteBookDataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,12 @@ namespace PasteBook_v1.Controllers
         {
             return View();
 
+        }
+
+        public JsonResult AddPost(string content)
+        {
+            var result = true;
+            return Json(new { result = result }, JsonRequestBehavior.AllowGet);
         }
         //public ActionResult About()
         //{

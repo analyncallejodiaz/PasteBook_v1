@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PasteBookDataAccess
+namespace PasteBookDataAccess.Manager
 {
-    public class LikeRepository:Repository<LIKE>
+   public class PostRepository : Repository<POST>
     {
     }
 }
