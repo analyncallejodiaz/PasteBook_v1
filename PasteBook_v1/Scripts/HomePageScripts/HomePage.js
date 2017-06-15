@@ -1,4 +1,8 @@
-﻿$(document).ready(function(){
+﻿$(document).ready(function () {
+
+    $('#button_post').on('click', function () {
+        AddPost();
+    })
     
     $("#textarea_homepage").on('keypress keyup',function () {
         var postLength = $(this).val().length;
@@ -26,9 +30,11 @@
                 type: 'GET',
                 data: data,
                 success: function () {
-                    alert("successful");
+                    $("#add_post_error").text("Successfully posted");
+                    $('#textarea_homepage').val('');
                 },
                 error: function () {
+                    $("#add_post_error").text("Not successfully posted");
                     alert("not successful");
                 }
             });

@@ -53,6 +53,7 @@
     <Compile Include="Manager\ConversionManager.cs" />
     <Compile Include="Manager\HashGenerator.cs" />
     <Compile Include="Manager\PasswordManager.cs" />
+    <Compile Include="Manager\PostBL.cs" />
     <Compile Include="Manager\SaltGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
